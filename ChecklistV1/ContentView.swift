@@ -9,18 +9,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var checklistItems = ["Walk the dog", "Brush my teeth", "Learn iOS develpment", "Soccer practice", "Eat ice cream"]
     var body: some View {
         NavigationView {
             List {
-                Text("Walk the dog")
-                Text("Brush my teeth")
-                Text("Learn iOS development")
-                Text("Soccer practice")
-                Text("Eat ice cream")
+                ForEach(checklistItems, id: \.self) {
+                    item in Text(item)
+                        //.onTapGesture {
+                            //let indexesToRemove = IndexSet(integersIn: 0...4)
+                            //print("indexesToRemove=", indexesToRemove)
+                            //self.checklistItems.remove(atOffsets: indexesToRemove)
+                            //self.checklistItems.remove(at: 0)
+                            //self.checklistItems.append(item)
+                            //self.printChecklistContents() }
+                } // End of ForEach
+                .onDelete(perform: deleteListItem)
+                .onMove(perform: moveListItem)
             } // End of List
+            .navigationBarItems(trailing: EditButton())
             .navigationBarTitle("Checklist")
+                .onAppear() {
+                    self.printChecklistContents()
+            }
         } // End of Navigation View
     } // End of body
+    
+    // Method
+    func printChecklistContents() {
+        for item in checklistItems {
+            print(item)
+        }
+    }
+    
+    func deleteListItem(whichElement: IndexSet) {
+        checklistItems.remove(atOffsets: whichElement)
+        printChecklistContents()
+    }
+    
+    func moveListItem(whichElement: IndexSet, destination:Int) {
+        checklistItems.move(fromOffsets: whichElement, toOffset: destination)
+        printChecklistContents()
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
