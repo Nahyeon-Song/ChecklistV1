@@ -18,6 +18,7 @@ struct ContentView: View {
                 Text("Soccer practice")
                 Text("Eat ice cream")
             } // End of List
+            .navigationBarTitle("Checklist")
         } // End of Navigation View
     } // End of body
 }
