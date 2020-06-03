@@ -17,7 +17,7 @@ struct ChecklistView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(checklist.checklistItems) {
+                ForEach(checklist.items) {
                     checklistItem in
                         HStack{
                             Text(checklistItem.name)
@@ -27,8 +27,8 @@ struct ChecklistView: View {
                         .background(Color.white) // for whole row clickable
                         .onTapGesture {
                             //print("The user tapped a list item!", checklistItem.name)
-                            if let matchingIndex = self.checklist.checklistItems.firstIndex(where: {$0.id == checklistItem.id}){
-                                self.checklist.checklistItems[matchingIndex].isChecked.toggle()
+                            if let matchingIndex = self.checklist.items.firstIndex(where: {$0.id == checklistItem.id}){
+                                self.checklist.items[matchingIndex].isChecked.toggle()
                             }
                             self.printChecklistContents()
                         }
@@ -46,18 +46,18 @@ struct ChecklistView: View {
     
     // Method
     func printChecklistContents() {
-        for item in checklist.checklistItems {
+        for item in checklist.items {
             print(item)
         }
     }
     
     func deleteListItem(whichElement: IndexSet) {
-        checklist.checklistItems.remove(atOffsets: whichElement)
+        checklist.items.remove(atOffsets: whichElement)
         printChecklistContents()
     }
     
     func moveListItem(whichElement: IndexSet, destination:Int) {
-        checklist.checklistItems.move(fromOffsets: whichElement, toOffset: destination)
+        checklist.items.move(fromOffsets: whichElement, toOffset: destination)
         printChecklistContents()
     }
 }

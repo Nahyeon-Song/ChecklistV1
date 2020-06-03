@@ -15,6 +15,7 @@
 		9A4ACB20247E21D70014235C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4ACB1E247E21D70014235C /* LaunchScreen.storyboard */; };
 		9A50C8CE24875E5F005044BD /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C8CD24875E5F005044BD /* Checklist.swift */; };
 		9A50C8D024876308005044BD /* ChecklistItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C8CF24876308005044BD /* ChecklistItems.swift */; };
+		9A50C8D2248764A2005044BD /* EditChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C8D1248764A2005044BD /* EditChecklistItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9A4ACB21247E21D70014235C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A50C8CD24875E5F005044BD /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		9A50C8CF24876308005044BD /* ChecklistItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItems.swift; sourceTree = "<group>"; };
+		9A50C8D1248764A2005044BD /* EditChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				9A4ACB13247E21D40014235C /* AppDelegate.swift */,
 				9A4ACB15247E21D40014235C /* SceneDelegate.swift */,
+				9A50C8D1248764A2005044BD /* EditChecklistItemView.swift */,
 				9A4ACB17247E21D40014235C /* ChecklistView.swift */,
 				9A50C8CF24876308005044BD /* ChecklistItems.swift */,
 				9A50C8CD24875E5F005044BD /* Checklist.swift */,
@@ -156,6 +159,7 @@
 				9A4ACB14247E21D40014235C /* AppDelegate.swift in Sources */,
 				9A50C8D024876308005044BD /* ChecklistItems.swift in Sources */,
 				9A4ACB16247E21D40014235C /* SceneDelegate.swift in Sources */,
+				9A50C8D2248764A2005044BD /* EditChecklistItemView.swift in Sources */,
 				9A4ACB18247E21D40014235C /* ChecklistView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
