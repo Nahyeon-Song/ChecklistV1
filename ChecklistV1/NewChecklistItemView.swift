@@ -27,7 +27,7 @@ struct NewChecklistItemView: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     HStack {
-                        Image(systemName: "plus.cirle.fill")
+                        Image(systemName: "plus.circle.fill")
                         Text("Add new item")
                     } // End of HStack
                 } // End of Button
